@@ -1,0 +1,61 @@
+.curso {
+    padding-bottom: 0;
+}
+.curso h2 {
+    text-align: left;
+    font-size: 2.3rem;
+}
+.curso h4 {
+    text-transform: uppercase;
+    text-align: left;	
+}
+.curso p, .curso-items li, .curso h4 {
+	color: var(--gris);
+}
+
+.curso ul  {
+    padding-left: 2.5rem ;
+}
+
+.curso {
+    background-color: var(--gris-claro);
+}
+
+.curso-desc button {
+    display: block;
+    margin: 2rem auto;
+}
+
+.wrapper {
+    display: grid;
+    column-gap: 2rem;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+
+.curso img {
+    display: none;
+}
+.curso-desc {
+    grid-column: 1/3;
+}
+
+@media (min-width: 768px) {
+    .wrapper {
+        display: grid;
+        column-gap: 2rem;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+    .curso img {
+        display: block;
+        grid-row: 1/3;
+        width: 100%;
+        max-width: 29.5rem;
+    }
+    .curso-desc {
+        grid-column: 2/4;
+    }
+        
+}

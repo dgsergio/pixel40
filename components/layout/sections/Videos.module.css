@@ -1,0 +1,31 @@
+.videos{
+    background-color: var(--gris-oscuro);
+    text-align: center;
+}
+
+.videos h2, .videos p {
+    color: #fff;   
+}   
+
+.videos img {
+    border-radius: 50%;
+    max-width: 16rem;
+}
+
+/* Servicios */
+.servicios p {
+    text-align: center;
+}
+.servicios-cuerpo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+.servicios img {
+    width: 100%;
+}
+
+.card p {
+    text-align: center;
+    font-style: italic;
+}

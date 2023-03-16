@@ -1,0 +1,44 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 9rem 0;
+}
+
+.title,
+.subtitle {
+  color: #fff;
+}
+
+.title {
+  font-family: var(--sans-serif);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 3.5rem;
+}
+
+.subtitle {
+  font-family: var(--cursive);
+  font-size: 2.1rem;
+  margin-bottom: -0.5rem;
+}
+
+@media (min-width: 600px) {
+  .title {
+    font-size: 5rem;
+  }
+
+  .subtitle {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 7rem;
+  }
+
+  .subtitle {
+    font-size: 3.8rem;
+  }
+}

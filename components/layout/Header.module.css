@@ -1,0 +1,35 @@
+.header {
+  background-color: var(--gris-oscuro);
+  background-image: url("../../public/img/header-bg.jpg");
+  background-position: center center;
+  background-size: cover;
+  height: 50rem;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo h1 {
+  padding: 0 0.3rem;
+  margin: 2rem 0;
+  font-family: var(--gothic);
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 3rem;
+  letter-spacing: 0.05rem;
+}
+
+.logo span {
+  color: var(--primario);
+}
+
+.logo img {
+  width: 2.2rem;
+  margin-top: 0.4rem;
+}

@@ -1,0 +1,33 @@
+.footer{
+    background-color: var(--gris-oscuro);
+}
+
+.contenedor-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contenedor-footer h4 {
+    text-transform: uppercase;
+    margin: auto 3rem;
+    text-align: left;
+    font-size: 1.7rem;
+    color: white    ;
+}
+
+.contenedor-footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 ;
+    padding: 3rem 0;
+    width: 25rem;
+}
+
+.contenedor-footer a {
+    color: white;
+}
+
+.contenedor-footer a:hover {
+    background-color: #00c0ff;
+}

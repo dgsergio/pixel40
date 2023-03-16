@@ -1,0 +1,48 @@
+.servicios p {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.subtitulo {
+  margin: 0;
+}
+.servicios h2 {
+  margin-bottom: 0.5rem;
+}
+
+.servicios h3 {
+  margin-bottom: 0;
+}
+
+.servicios-cuerpo {
+  text-align: center;
+}
+.servicios img {
+  max-width: 40rem;
+}
+
+.card p {
+  text-align: center;
+  font-style: italic;
+  margin: 0;
+}
+
+.card {
+  margin: 3rem 0;
+}
+
+@media (min-width: 600px) {
+  .servicios-cuerpo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+
+  .servicios img {
+    width: 100%;
+  }
+
+  .card {
+    margin: 0;
+  }
+}

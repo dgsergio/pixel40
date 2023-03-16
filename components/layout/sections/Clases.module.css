@@ -1,0 +1,43 @@
+.subtitulo {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.clases h2 {
+  margin-bottom: 0.5rem;
+}
+
+.clases-img {
+  width: 100%;
+}
+
+.btn-clases {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.clases-contenido img {
+    padding: 0 5rem;
+}
+
+
+@media (min-width: 768px) {
+  .clases p {
+    margin-top: 0;
+  }
+
+  .clases-contenido {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  
+.clases-contenido img {
+    padding: 0;
+}
+
+  .btn-clases {
+    grid-column: 1/3;
+  }
+}
