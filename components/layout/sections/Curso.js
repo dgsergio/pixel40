@@ -1,5 +1,4 @@
 import classes from "./Curso.module.css";
-import Button from "../UI/Button";
 
 const CursoSection = () => {
   return (
@@ -23,7 +22,7 @@ const CursoSection = () => {
             puede comenzar a diseñar en Photoshop sin complicaciones
             innecesarias ¿Qué estás esperando?
           </p>
-          <Button>Reproducir el capítulo 1</Button>
+          <button>Reproducir el capítulo 1</button>
         </div>
         <div className={classes["curso-items"]}>
           <h4>El Curso</h4>

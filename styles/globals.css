@@ -5,6 +5,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--gris-oscuro);
+}
+
+.whitebg {
+  background-color: #fff;
 }
 
 code {
@@ -89,6 +94,36 @@ textarea {
   font-family: sans-serif;
   letter-spacing: 0.01rem;
 }
+
+button {
+  font-family: var(--sans-serif);
+  font-size: 1.5rem;
+  letter-spacing: 0.05rem;
+  padding: 2rem 3.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: var(--primario);;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  width: 90%;
+  cursor: pointer;
+  transition: all 200ms ease;
+  margin: 1.5rem auto;
+
+}
+
+button:hover {
+  background-color: var(--primarioOscuro);
+  
+}
+
+@media (min-width: 768px) {
+  button {
+    width: auto;
+  }
+}
+
 
 .container {
   margin: 0 auto;

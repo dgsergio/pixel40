@@ -1,0 +1,80 @@
+.contacto {
+  background-color: #212529;
+  background-image: url("../../../public/img/map-image.png");
+}
+
+.contacto h2 {
+  color: #fff;
+  margin-bottom: 1rem;
+  font-size: 3.8rem;
+}
+
+.formulario-principal fieldset {
+  border: none;
+  color: #fff;
+}
+
+.formulario-principal legend {
+  text-align: center;
+  font-size: 1.9rem;
+}
+
+.campos {
+  display: grid;
+  gap: 2.5rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.campos textarea {
+  grid-row: 1/4;
+  grid-column: 2/3;
+}
+
+.enviar {
+  width: 100%;
+}
+
+.campos {
+  margin: 3rem auto;
+}
+
+.campos input,
+.campos textarea {
+  border: none;
+  padding: 2rem;
+  border-radius: 0.3rem;
+}
+
+.campos input:focus,
+.campos textarea:focus {
+  outline: 0.3rem solid var(--primario);
+}
+
+.campos input::placeholder,
+.campos textarea::placeholder {
+  color: #b9b8b8;
+  font-weight: 600;
+}
+
+.mensaje-alerta {
+  display: block;
+  margin: 0 auto;
+  padding: 1.5rem 0;
+  border-radius: 0.5rem;
+  font-family: var(--sans-serif);
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.4rem;
+  background-color: #099b63;
+  text-align: center;
+}
+
+.error-alerta {
+  color: #ffd6d6;
+  background-color: #ca3b3b;
+}
+
+.ocultar {
+  display: none;
+}
