@@ -1,3 +1,8 @@
+.subtitulo {
+  font-family: var(--cursive);
+  font-size: 1.8rem;
+}
+
 .servicios p {
   text-align: center;
   margin-bottom: 2rem;

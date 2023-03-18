@@ -17,6 +17,19 @@ code {
     monospace;
 }
 
+a {
+  color: var(--primario);
+}
+
+a:hover {
+  color: var(--primarioOscuro);
+  text-decoration: underline;
+}
+
+.text-primary {
+  color: #282828 !important;
+}
+
 :root {
   --primario: #00c0ff;
   --primarioOscuro: #00a0eb;
@@ -24,11 +37,10 @@ code {
   --gris: #5a6269;
   --gris-claro: #ddd;
   --claro: #daeaef;
-  --serif: "Roboto Slab", serif;
+  --gothic: 'Nanum Gothic', sans-serif;
   --serif: 'Roboto Slab', serif;   
   --sans-serif: 'Montserrat', sans-serif;
   --cursive: 'Solitreo', cursive;
-  --gothic: 'Nanum Gothic', sans-serif;
   
 }
 
@@ -62,6 +74,11 @@ h2 {
 }
 h4 {
   font-size: 2.2rem;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid rgba(0,0,0,.1);
 }
 
 h2,

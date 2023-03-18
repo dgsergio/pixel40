@@ -1,10 +1,10 @@
 import Head from "next/head";
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
-import CursoSection from "../components/layout/sections/Curso";
-import ClasesSection from "../components/layout/sections/Clases";
-import VideosSection from "../components/layout/sections/Videos";
-import ServiciosSection from "../components/layout/sections/Servicios";
+import CursoSection from "../components/layout/sections/home/Curso";
+import ClasesSection from "../components/layout/sections/home/Clases";
+import VideosSection from "../components/layout/sections/home/Videos";
+import ServiciosSection from "../components/layout/sections/home/Servicios";
 
 const HomePage = () => {
   return (

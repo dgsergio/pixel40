@@ -1,6 +1,8 @@
 .subtitulo {
   text-align: center;
   margin-bottom: 2rem;
+  font-family: var(--cursive);
+  font-size: 1.8rem;
 }
 
 .clases h2 {

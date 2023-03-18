@@ -1,3 +1,6 @@
+// 1. Fix hover on social media 
+// 2. Create an array for the social media and make it dynamic 
+
 import classes from "./Footer.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -7,6 +10,7 @@ import {
   faTwitter,
   faPatreon,
   faDiscord,
+  faTwitch
 } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
@@ -67,6 +71,15 @@ const Footer = () => {
               rel="noreferrer"
             >
               <FontAwesomeIcon icon={faDiscord} />
+            </a>
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="https://www.twitch.tv/estudioPixel40"
+              rel="noreferrer"
+            >
+              <FontAwesomeIcon icon={faTwitch} />
             </a>
           </li>
         </ul>

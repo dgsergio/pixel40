@@ -1,0 +1,43 @@
+.section {
+    padding: 4rem 0;
+}
+
+.row {
+    margin-bottom: 5rem;
+}
+
+.row h3 {
+    font-size: 2.5rem;
+    text-align: left;
+}
+
+@media (min-width: 900px) {
+    .info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2.5rem;
+    }
+}
+
+.row img {
+    width: 100%;
+    border-radius: 0.7rem;
+    margin: 1rem 0;
+    
+}
+
+@media (min-width: 900px) {
+    .row img {
+        max-width: 50rem;
+        border-radius: 0.7rem;
+    }
+
+    img.variant {
+        grid-row: 1 /2;
+    }
+    h3.variant {
+        padding: 0;
+        margin: 0;
+    }
+
+}

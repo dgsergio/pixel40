@@ -1,4 +1,4 @@
-import HeroSection from './sections/Hero';
+import HeroSection from './sections/home/Hero';
 import classes from './Header.module.css';
 import NavHeader from './NavBar';
 
