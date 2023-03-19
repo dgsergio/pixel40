@@ -13,7 +13,7 @@ const HomePage = () => {
         <title>Pixel40 - Reviews y Tutoriales</title>
       </Head>
       <Header />
-      <main>
+      <main className="whitebg">
         <CursoSection />
         <ClasesSection />
         <VideosSection />

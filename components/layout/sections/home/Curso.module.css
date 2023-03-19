@@ -1,9 +1,16 @@
 .curso {
-    padding-bottom: 0;
+    padding-bottom: 5rem;
+}
+
+@media (min-width: 480px) {
+    .curso {
+        padding-bottom: 0;
+    }
 }
 .curso h2 {
     text-align: left;
     font-size: 2.3rem;
+    margin-bottom: 0;
 }
 .curso h4 {
     text-transform: uppercase;
@@ -27,10 +34,17 @@
 }
 
 .wrapper {
-    display: grid;
-    column-gap: 2rem;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
+    display: block;
+    
+}
+
+@media (min-width: 480px) {
+    .wrapper {
+        display: grid;
+        column-gap: 2rem;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 .curso img {
@@ -38,7 +52,15 @@
 }
 .curso-desc {
     grid-column: 1/3;
+    margin-bottom: 5rem;
 }
+
+@media (min-width: 480px) {
+    .curso-desc {
+    margin-bottom: 0;
+    }
+}
+
 
 @media (min-width: 768px) {
     .wrapper {

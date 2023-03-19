@@ -9,10 +9,12 @@
 
 .contenedor-footer h4 {
     text-transform: uppercase;
-    margin: auto 3rem;
+    margin: auto 2rem;
     text-align: left;
     font-size: 1.7rem;
-    color: white    ;
+    color: white;
+    display: inline-block;
+    min-width: 10rem;
 }
 
 .contenedor-footer ul {

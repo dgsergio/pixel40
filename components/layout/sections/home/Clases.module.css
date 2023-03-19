@@ -3,6 +3,7 @@
   margin-bottom: 2rem;
   font-family: var(--cursive);
   font-size: 1.8rem;
+  color: #888;
 }
 
 .clases h2 {
@@ -18,10 +19,9 @@
   text-align: center;
 }
 
-.clases-contenido img {
-    padding: 0 5rem;
+.clases-contenido {
+  margin-top: 3.5rem;
 }
-
 
 @media (min-width: 768px) {
   .clases p {

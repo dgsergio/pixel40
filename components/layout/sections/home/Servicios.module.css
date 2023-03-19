@@ -1,6 +1,8 @@
 .subtitulo {
+  margin-bottom: 2rem;
   font-family: var(--cursive);
   font-size: 1.8rem;
+  color: #888;
 }
 
 .servicios p {
@@ -21,9 +23,11 @@
 
 .servicios-cuerpo {
   text-align: center;
+  margin-top: 3rem;
 }
 .servicios img {
   max-width: 40rem;
+  width: 100%;
 }
 
 .card p {

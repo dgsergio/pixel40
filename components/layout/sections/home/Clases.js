@@ -2,7 +2,7 @@ import classes from "./Clases.module.css";
 
 const ClasesSection = () => {
   return (
-    <div className="whitebg">
+    <div className="whitebg" id='clases'>
       <section className={classes.clases + " container"}>
         <h2>Clases online</h2>
         <p className={classes["subtitulo"]}>

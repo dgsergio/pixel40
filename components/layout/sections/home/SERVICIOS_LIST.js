@@ -8,7 +8,7 @@ const SERVICIOS_LIST = [
     {
         id: 's2',
         title: 'Retoque Digital',
-        description: 'DTécnicas de manipulación fotográfica', 
+        description: 'Técnicas de manipulación fotográfica', 
         imgUrl: 'img/portfolio/02-thumbnail.jpg'
     },
     {

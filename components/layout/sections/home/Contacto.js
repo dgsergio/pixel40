@@ -1,4 +1,5 @@
 // 1. Make it works
+// 2. responsive
 
 import classes from './Contacto.module.css';
 

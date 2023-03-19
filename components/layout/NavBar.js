@@ -1,3 +1,6 @@
+//1. Create a fixed navegation version 
+//2. maybe psosition absoulte?
+
 import Link from "next/link";
 import classes from "./NavBar.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -29,12 +32,12 @@ const NavBar = () => {
           </button>
         </div>
         <nav className={menuClasses}>
-          <Link href="/">Inicio</Link>
-          <Link href="/curso">Curso</Link>
-          <Link href="#">Clases</Link>
-          <Link href="#">Donar</Link>
-          <Link href="#">YouTube</Link>
-          <Link href="contacto">Contacto</Link>
+          <Link href="/" onClick={openMenuHandler}>Inicio</Link>
+          <Link href="/curso" onClick={openMenuHandler}>Curso</Link>
+          <Link href="/#clases" onClick={openMenuHandler}>Clases</Link>
+          <Link href="/donar" onClick={openMenuHandler}>Donar</Link>
+          <Link href="#"onClick={openMenuHandler} >YouTube</Link>
+          <Link href="contacto" onClick={openMenuHandler}>Contacto</Link>
         </nav>
       </div>
     </div>

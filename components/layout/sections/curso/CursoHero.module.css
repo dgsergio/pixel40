@@ -1,6 +1,6 @@
 .section {
   display: flex;
-  padding: 8rem 5rem 0;
+  padding-top: 8rem;
 }
 
 @media (min-width: 768px) {
