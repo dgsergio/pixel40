@@ -36,7 +36,7 @@ const NavBar = () => {
           <Link href="/curso" onClick={openMenuHandler}>Curso</Link>
           <Link href="/#clases" onClick={openMenuHandler}>Clases</Link>
           <Link href="/donar" onClick={openMenuHandler}>Donar</Link>
-          <Link href="#"onClick={openMenuHandler} >YouTube</Link>
+          <Link href="/videos"onClick={openMenuHandler} >YouTube</Link>
           <Link href="contacto" onClick={openMenuHandler}>Contacto</Link>
         </nav>
       </div>
