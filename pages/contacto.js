@@ -1,11 +1,11 @@
 import Footer from "@/components/layout/Footer";
+import Navigation from "@/components/layout/Navigation";
 import Contacto from "@/components/layout/sections/contacto/Contacto";
-import NavHeader from "../components/layout/NavBar";
 
 const ContactPage = () => {
   return (
     <>
-      <NavHeader />
+      <Navigation />
       <main>
         <Contacto />
       </main>

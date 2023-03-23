@@ -5,6 +5,7 @@ import CursoSection from "../components/layout/sections/home/Curso";
 import ClasesSection from "../components/layout/sections/home/Clases";
 import VideosSection from "../components/layout/sections/home/Videos";
 import ServiciosSection from "../components/layout/sections/home/Servicios";
+import NavFixed from "@/components/layout/NavFixed";
 
 const HomePage = () => {
 

@@ -3,10 +3,10 @@ import { useState } from "react";
 import classes from "./NavBar.module.css";
 import NavMenu from "./NavMenu";
 
-const NavBar = () => {
+const NavFixed = () => {
   const [showMenu, setShowMenu] = useState(false);
   return (
-    <div className={classes.navBar}>
+    <div className={classes.navFix}>
       <div className={`container ${classes.container}`}>
         <div className={classes.logoMenu}>
           <div className={classes.logo}>
@@ -32,10 +32,8 @@ const NavBar = () => {
         </div>
       )}
     </div>
+    
   );
 };
 
-export default NavBar;
-
-//1. Create a fixed navegation version
-//2. maybe psosition absoulte?
+export default NavFixed;

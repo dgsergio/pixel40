@@ -1,11 +1,11 @@
 import HeroSection from './sections/home/Hero';
 import classes from './Header.module.css';
-import NavHeader from './NavBar';
+import Navigation from './Navigation';
 
 const Header = () => {
   return (
     <header className={classes.header}>
-      <NavHeader />
+      <Navigation />
       <HeroSection />
     </header>
   );

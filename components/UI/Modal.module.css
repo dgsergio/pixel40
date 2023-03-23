@@ -4,13 +4,13 @@
   left: 0;
   width: 100%;
   height: 100vh;
-  z-index: 20;
+  z-index: 120;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
 .modal {
   position: fixed;
-  z-index: 30;
+  z-index: 130;
   height: 89vh;
   width: 95%;
   left: calc(50% - (95% / 2));

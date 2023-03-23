@@ -1,12 +1,12 @@
-import NavHeader from "../components/layout/NavBar";
 import Footer from "@/components/layout/Footer";
 import VideosHeader from "@/components/layout/sections/videos/VideosHeader";
 import Youtube from "@/components/layout/sections/videos/Youtube";
+import Navigation from "@/components/layout/Navigation";
 
 const Videos = () => {
   return (
     <>
-      <NavHeader />
+      <Navigation />
       <main className="whitebg">
         <VideosHeader />
         <Youtube />
