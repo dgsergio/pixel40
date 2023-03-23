@@ -28,8 +28,12 @@
 
 .contenedor-footer a {
     color: white;
+    padding: 0.3rem;
+    transition: all 200ms ease-in;
 }
 
 .contenedor-footer a:hover {
-    background-color: #00c0ff;
+    background-color: #54546d;
+    padding: 0.9rem 1.2rem;
+    border-radius: 0.5rem;
 }

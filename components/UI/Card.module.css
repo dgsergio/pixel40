@@ -1,0 +1,205 @@
+.card {
+  border: 0.2rem solid var(--gris-claro);
+  color: var(--gris-oscuro);
+  border-radius: 0.8rem;
+  max-width: 33rem;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  animation: rotar 600ms ease-out;
+}
+
+
+.usd {
+  background-color: #5cbe30;
+  border: 0.2rem solid #5cbe30;
+  color: #fff;
+}
+
+.ars {
+  background-color: #23a0f3;
+  border: 0.2rem solid #23a0f3;
+  color: #fff;
+}
+
+.promo {
+  position: absolute;
+  top: 2.5rem;
+  transform: scale(1.04);
+  left: 0;
+  width: 100%;
+  padding: 0.5rem 0;
+  background-color: #df5454;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+@media (min-width: 480px) {
+  .promo {
+    font-size: 1.6rem;
+  }
+}
+
+.body {
+  padding: 8.5rem 1rem 3.5rem;
+}
+
+@media (min-width: 480px) {
+  .body {
+    padding: 8.5rem 2rem 3.5rem;
+  }
+}
+
+.module {
+  text-transform: uppercase;
+  font-size: 1.7rem;
+  margin: 0;
+}
+
+.oldPrice {
+  text-decoration: line-through;
+}
+
+.price {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+@media (min-width: 480px) {
+  .price {
+    font-size: 4.5rem;
+    font-weight: bold;
+  }
+}
+
+.description,
+.asterisk {
+  font-family: var(--serif);
+}
+
+.description {
+  margin: 1rem auto;
+  font-size: 1.4rem;
+}
+
+@media (min-width: 480px) {
+  .description {
+    font-size: 1.6rem;
+  }
+}
+
+.asterisk {
+  font-size: 1.3rem;
+  padding: 1.4rem 0;
+}
+
+.body button {
+  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 1.3rem;
+  letter-spacing: 0.01rem;
+  padding: 0.9rem 1.2rem;
+}
+
+@media (min-width: 480px) {
+  .body button {
+    letter-spacing: 0.3rem;
+  }
+}
+
+.body button:hover,
+.paypalBtn:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* PayPal */
+.paypal {
+  background-color: #ddd;
+  color: var(--gris);
+}
+.paypal h4 {
+  color: var(--gris);
+  font-size: 3.5rem;
+  margin: 4rem auto;
+}
+
+.paypalBtn {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 1.5rem 1.7rem;
+  font-size: 1.4rem;
+  letter-spacing: 0;
+}
+
+@media (min-width: 480px) {
+  .paypalBtn {
+    padding: 1.5rem 3rem;
+    font-size: 1.4rem;
+    letter-spacing: 0.1rem;
+  }
+}
+
+.paypal .description {
+  padding: 0.5rem 5%;
+  margin: 0 2rem 2.2rem;
+}
+
+.paypal .asterisk {
+  margin-top: 2rem;
+}
+
+.back {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.paypal {
+  padding-bottom: 3rem;
+  animation: rotar 600ms ease-out;
+}
+
+@keyframes rotar {
+  from {
+    transform: rotatey(180deg);
+  }
+  to {
+    transform: rotatey(0deg);
+  }
+}
+@-webkit-keyframes rotar {
+  from {
+    transform: rotatey(180deg);
+  }
+  to {
+    transform: rotatey(0deg);
+  }
+}
+
+/* Trasnferencia  */
+.paypal h5 {
+  font-size: 2.5rem;
+  margin: 2rem auto;
+}
+
+.bank {
+  text-align: left;
+  padding: 2rem 4rem 0;
+}
+
+.bank p {
+  color: var(--gris);
+  margin: 0;
+}
+
+.priceTransfer {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.asteriskBank{ 
+  font-size: 1.3rem;
+  padding: 2rem 0;
+  font-family: var(--serif);
+}
+
+.contactoDesc {
+  background-color: #eee;
+}

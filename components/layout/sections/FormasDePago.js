@@ -1,9 +1,9 @@
 import classes from './FormasDePago.module.css'
 
-const FormasDePago = () => {
+const FormasDePago = ({padding}) => {
   return (
-    <section className={classes.section}>
-      <hr />
+    <section style={{padding: padding}} className={classes.section}>
+      {!padding && <hr />}
       <div className={`${classes.formas} container`}>
         <img src="img/logos/banco.jpg" alt="transferencia bancaría" />
         <img src="img/logos/visa.jpg" alt="Visa" />

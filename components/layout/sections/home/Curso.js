@@ -1,6 +1,10 @@
 import classes from "./Curso.module.css";
+import CapituloUno from "@/components/CapituloUno";
+import { ModalContext } from "@/store/modal-context";
+import { useContext } from "react";
 
 const CursoSection = () => {
+  const {modal, openHandler} = useContext(ModalContext);
   return (
     <section className={classes.curso}>
       <div className={classes.wrapper + " container"}>
@@ -11,18 +15,15 @@ const CursoSection = () => {
         <div className={classes["curso-desc"]}>
           <h2>Curso Photoshop de 0 a 100</h2>
           <p>
-            Aprende a realizar tus propios trabajos con el curso online{" "}
-            <em>Photoshop de 0 a 100</em>. Domina en forma gradual el arte del
-            diseño digital. La metodología de estudio será de forma clara y
-            sencilla.
+            Aprende a realizar tus propios trabajos con el curso online <em>Photoshop de 0 a 100</em>. Domina en forma gradual el arte del diseño digital. La metodología de estudio será de forma clara y sencilla.
           </p>
           <p>
-            No necesitas ningún conocimiento previo, con nuestros{" "}
-            <em>Videos Bajo Demanda</em> cualquier persona, sin importar edad,
-            puede comenzar a diseñar en Photoshop sin complicaciones
-            innecesarias ¿Qué estás esperando?
+            No necesitas ningún conocimiento previo, con nuestros <em>Videos Bajo Demanda</em> cualquier persona, sin importar edad, puede comenzar a diseñar en Photoshop sin complicaciones innecesarias ¿Qué estás esperando?
           </p>
-          <button>Reproducir el capítulo 1</button>
+          <div className={classes.button}>
+          <button onClick={()=>openHandler('CAP1')}>Reproducir el capítulo 1</button>
+          {modal === 'CAP1' && <CapituloUno txtBtn='¡ Más información !' linkBtn='/curso'/>}
+          </div>
         </div>
         <div className={classes["curso-items"]}>
           <h4>El Curso</h4>

@@ -1,0 +1,103 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal {
+  position: fixed;
+  z-index: 30;
+  height: 89vh;
+  width: 95%;
+  left: calc(50% - (95% / 2));
+  margin-top: 2.2vh;
+  padding-bottom: 6rem;
+  background-color: white;
+  border-radius: 0.8rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  animation: slide-down 300ms ease-out forwards;
+}
+
+@media (min-width: 480px) {
+  .modal {
+    height: 96vh;
+  }
+}
+
+@media (min-width: 820px) {
+  .modal {
+    width: 76.8rem;
+    left: calc(50% - 38.4rem);
+  }
+}
+
+.body {
+  padding: 2rem;
+  overflow-y: auto;
+  height: 100%;
+}
+
+.body::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+.body::-webkit-scrollbar-thumb {
+  background-color: #999;
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header {
+  background-color: #ddd;
+  border-top-left-radius: 0.8rem;
+  border-top-right-radius: 0.8rem;
+  text-align: right;
+}
+
+.header button{
+  background-color: #bbb;
+  text-shadow: 0.1rem 0.1rem 0px #888;
+  font-weight: 700;
+  padding: 0.5rem 1.2rem;
+  margin: 1rem;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  width: auto;
+  transition: background 300ms ease-in;
+}
+
+.header button:hover{
+  background-color: #e46969;
+}
+
+.footer {
+  text-align: right;
+  border-top: 0.1rem solid #ddd ;
+  margin-top: 3rem;
+}
+
+.footer button {
+  background-color: transparent;
+  color: var(--gris);
+  margin: 0;
+  padding: 1rem 0;
+  font-size: 1.4rem;
+  text-transform: capitalize;
+}
+
+.footer button:hover {
+  color: #e46969;
+}

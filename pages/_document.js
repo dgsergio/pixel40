@@ -24,6 +24,8 @@ export default function Document() {
           referrerpolicy="no-referrer"
         />
       </Head>
+      <div id="backdrop-overlay" />
+      <div id="modal-overlay" />
       <body>
         <Main />
         <NextScript />

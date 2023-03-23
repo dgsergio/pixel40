@@ -9,7 +9,8 @@ import { useState } from "react";
 
 const NavBar = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
-  const openMenuHandler = () => setMenuIsOpen(pV=>!pV);
+  const toggleMenuHandler = () => setMenuIsOpen(pV=>!pV);
+  const closeMenuHandler = () => setMenuIsOpen(false);
 
   const menuClasses = menuIsOpen?`${classes.showMenu} ${classes.nav}`:classes.nav;
   
@@ -27,17 +28,17 @@ const NavBar = () => {
               </h1>
             </Link>
           </div>
-          <button onClick={openMenuHandler} className={classes.btn}>
+          <button onClick={toggleMenuHandler} className={classes.btn}>
             Menu <FontAwesomeIcon icon={faBars} />
           </button>
         </div>
         <nav className={menuClasses}>
-          <Link href="/" onClick={openMenuHandler}>Inicio</Link>
-          <Link href="/curso" onClick={openMenuHandler}>Curso</Link>
-          <Link href="/#clases" onClick={openMenuHandler}>Clases</Link>
-          <Link href="/donar" onClick={openMenuHandler}>Donar</Link>
-          <Link href="/videos"onClick={openMenuHandler} >YouTube</Link>
-          <Link href="contacto" onClick={openMenuHandler}>Contacto</Link>
+          <Link href="/" onClick={closeMenuHandler}>Inicio</Link>
+          <Link href="/curso" onClick={closeMenuHandler}>Curso</Link>
+          <Link href="/#clases" onClick={closeMenuHandler}>Clases</Link>
+          <Link href="/donar" onClick={closeMenuHandler}>Donar</Link>
+          <Link href="/videos"onClick={closeMenuHandler} >YouTube</Link>
+          <Link href="contacto" onClick={closeMenuHandler}>Contacto</Link>
         </nav>
       </div>
     </div>

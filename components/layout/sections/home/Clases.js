@@ -1,8 +1,13 @@
+import PrecioClases from "@/components/PrecioClases";
+import { ModalContext } from "@/store/modal-context";
+import { useContext } from "react";
 import classes from "./Clases.module.css";
 
 const ClasesSection = () => {
+  const { modal, openHandler } = useContext(ModalContext);
+
   return (
-    <div className="whitebg" id='clases'>
+    <div className="whitebg" id="clases">
       <section className={classes.clases + " container"}>
         <h2>Clases online</h2>
         <p className={classes["subtitulo"]}>
@@ -31,7 +36,10 @@ const ClasesSection = () => {
             </p>
           </div>
           <div className={classes["btn-clases"]}>
-            <button>Precio y forma de pago</button>
+            <button onClick={() => openHandler("CLASES")}>
+              Precio y forma de pago
+            </button>
+            {modal === "CLASES" && <PrecioClases />}
           </div>
         </div>
       </section>

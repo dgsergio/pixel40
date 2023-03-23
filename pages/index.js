@@ -7,6 +7,7 @@ import VideosSection from "../components/layout/sections/home/Videos";
 import ServiciosSection from "../components/layout/sections/home/Servicios";
 
 const HomePage = () => {
+
   return (
     <>
       <Head>

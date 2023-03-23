@@ -28,6 +28,12 @@
 
 .infoFooter {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.infoFooter img {
+    cursor: pointer;
 }
 
 .infoFooter button {

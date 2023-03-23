@@ -29,3 +29,7 @@
     text-align: center;
     font-style: italic;
 }
+
+a.link:hover {
+    text-decoration: none;
+}

@@ -1,0 +1,42 @@
+.packs {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1rem;
+  margin: 2rem auto 3rem;
+}
+
+.payment {
+  background-color: #ddd;
+  text-align: center;
+  padding: 1.1rem 0;
+  font-weight: bold;
+  color: var(--gris);
+}
+
+.region {
+  text-align: center;
+}
+.region select {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  animation-name: zoomregion;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+}
+
+@keyframes zoomregion {
+  0% {
+    transform: scale(100%);
+  }
+  50% {
+    transform: scale(50%);
+  }
+  100% {
+    transform: scale(100%);
+  }
+}
+
+.region select {
+  font-size: 1.4rem;
+}

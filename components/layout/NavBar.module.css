@@ -4,6 +4,10 @@
   transform: scale(0.7);
 }
 
+.logo a {
+  text-decoration: none;
+}
+
 .logo h1 {
   padding: 0 0.3rem;
   margin: 0;

@@ -112,7 +112,7 @@ textarea {
   letter-spacing: 0.01rem;
 }
 
-button {
+button, .button {
   font-family: var(--sans-serif);
   font-size: 1.5rem;
   letter-spacing: 0.05rem;
@@ -125,20 +125,23 @@ button {
   border-radius: 0.5rem;
   width: 90%;
   cursor: pointer;
-  transition: all 200ms ease;
   margin: 1.5rem auto;
-
+  transition: all 200ms ease;
+  text-align: center;
 }
 
-button:hover {
+button:hover, .button:hover {
   background-color: var(--primarioOscuro);
-  
+  text-decoration: none;
+  color: #fff;
+  transform: scale(103%);
 }
 
 @media (min-width: 768px) {
-  button {
+  button, .button {
     width: auto;
   }
+
 }
 
 
