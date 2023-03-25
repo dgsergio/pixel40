@@ -1,7 +1,38 @@
+// redirect this videos.php? /videos.html?
+
 import Link from "next/link";
+import { useRouter } from "next/router";
+import VideosDownload from "../../VideosDownload";
 import classes from "./VideosHeader.module.css";
 
 const VideosHeader = () => {
+  const router = useRouter();
+  let fileData = {
+    desc: "Material anterior al 9/6/2022, buscalo por fecha de subida del video.Formato de nombre AÑO-MES-DIA.",
+    img: "img/videos/galeria.jpg",
+    url: "https://www.dropbox.com/sh/cszt0dplpfhtqo0/AADvoSobfjIzMVFwCP1SWFg0a?dl=0",
+    type: "default",
+  };
+  const file = Object.keys(router.query)[0];
+
+  if (file) {
+    if (file.slice(-3) === "jpg") {
+      fileData = {
+        desc: "Puedes presionar el boton derecho sobre la imagen y seleccionar Guardar imagen como...",
+        img: "img/dl/" + Object.keys(router.query)[0],
+        url: undefined,
+        type: file.slice(-3),
+      };
+    } else if (file.slice(-3) === "zip") {
+      fileData = {
+        desc: "Descarga el material presionando en el enlace disponible más abajo.",
+        img: "img/file.png",
+        url: "img/dl/" + Object.keys(router.query)[0],
+        type: file.slice(-3),
+      };
+    }
+  }
+
   return (
     <section className={`container ${classes.section}`}>
       <div className={`${classes.card} ${classes.cursoAd}`}>
@@ -20,7 +51,6 @@ const VideosHeader = () => {
               exitosa metodología de estudio podrás alcanzar tu meta.
             </p>
           </div>
-          
         </div>
         <div className={classes.footer}>
           <p>
@@ -30,29 +60,12 @@ const VideosHeader = () => {
           </p>
         </div>
       </div>
-      <div className={`${classes.card} ${classes.descarga}`}>
-        <div className={classes.header}>
-          <h3>Descarga Media</h3>
-        </div>
-        <div className={classes.body}>
-          <p>
-            Material anterior al 9/6/2022, buscalo por fecha de subida del
-            video.Formato de nombre AÑO-MES-DIA.
-          </p>
-          <a
-            target="_blank"
-            href="https://www.dropbox.com/sh/cszt0dplpfhtqo0/AADvoSobfjIzMVFwCP1SWFg0a?dl=0"
-          >
-            <img src="img/videos/galeria.jpg" alt="" />
-          </a>
-          <a
-            target="_blank"
-            href="https://www.dropbox.com/sh/cszt0dplpfhtqo0/AADvoSobfjIzMVFwCP1SWFg0a?dl=0"
-          >
-            <button>Descargar</button>
-          </a>
-        </div>
-      </div>
+      <VideosDownload
+        img={fileData.img}
+        url={fileData.url}
+        desc={fileData.desc}
+        type={fileData.type}
+      />
     </section>
   );
 };

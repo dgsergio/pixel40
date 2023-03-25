@@ -24,10 +24,12 @@
 .footer {
   text-align: center;
   text-transform: uppercase;
-  background-color: aliceblue;
-  border-radius: 0.5rem;
+  background-color: #e6f3ff;
+  border-radius: 0.8rem;
   margin: 2rem;
+  padding: 0.4rem 0;
 }
+
 
 .footer p {
   margin: 0;
@@ -37,15 +39,6 @@
   margin-top: 0;
 }
 
-.descarga .body {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-
-.descarga button {
-  padding: 2rem 9rem;
-}
 
 .cursoAd {
   padding: 3rem 0;
@@ -78,9 +71,7 @@
   margin-top: 2rem;
   width: 100%;
 }
-.descarga .body img {
-width: 80%;
-}
+
 .imageAd {
   max-width: none;
 }

@@ -3,14 +3,15 @@ import Video from "@/components/video";
 import classes from "./Youtube.module.css";
 
 const Youtube = () => {
-  const key = "AIzaSyAGyujwMrK9QZoy5G41wLAwoCCYrmwHoYY";
-  const channelId = "UCO2EOwxk1GU_wJMQN1VH1dQ";
-  const url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelId=${channelId}&maxResults=3&order=viewCount&key=${key}`;
   const [videos, setVideos] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [showMore, setShowMore] = useState(false);
 
   useEffect(() => {
+    const key = "AIzaSyAGyujwMrK9QZoy5G41wLAwoCCYrmwHoYY";
+    const channelId = "UCO2EOwxk1GU_wJMQN1VH1dQ";
+    const url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelId=${channelId}&maxResults=6&order=date&key=${key}`;
     fetch(url)
       .then((response) => {
         setLoading(true);
@@ -47,14 +48,31 @@ const Youtube = () => {
 
   return (
     <section className={`${classes.section} container`}>
-      <h2>Tutoriales de Photoshop GRATIS</h2>
+      <h2>Tutoriales de Photoshop</h2>
+      <p className={classes.subtitle}>
+        Disfruta los últimos videos tutoriales de Pixel40
+      </p>
       {loading && <div className={classes.message}>Loading...</div>}
       {error && <div className={classes.message}>{error}</div>}
       <div className={classes.videos}>
-        {videos.map((e) => (
-          <Video key={e.id} data={e} />
-        ))}
+        {videos.map((e, index) => {
+          if (index <= 2) return <Video key={e.id} data={e} />;
+          else return "";
+        })}
       </div>
+
+      {!showMore ? (
+        <div className={classes["load-more"]}>
+          <button onClick={() => setShowMore((pV) => !pV)}>Cargar más</button>
+        </div>
+      ) : (
+        <div className={classes.videos}>
+          {videos.map((e, index) => {
+            if (index > 2) return <Video key={e.id} data={e} />;
+            else return "";
+          })}
+        </div>
+      )}
       <div className={classes.moreInfo}>
         <p>
           Suscribete a las lecciones completamente gratis de
