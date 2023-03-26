@@ -8,42 +8,45 @@ const Youtube = () => {
   const [loading, setLoading] = useState(false);
   const [showMore, setShowMore] = useState(false);
 
+  const transformData = (data) => {
+    let videosData = [];
+    for (const e of data.items) {
+      videosData = [
+        ...videosData,
+        {
+          id: e.id.videoId,
+          videoUrl: "https://www.youtube.com/watch?v=" + e.id.videoId,
+          title: e.snippet.title,
+          imageUrl: e.snippet.thumbnails.high.url,
+          description: e.snippet.description,
+        },
+      ];
+    }
+    return videosData;
+  };
+
   useEffect(() => {
-    const key = "AIzaSyAGyujwMrK9QZoy5G41wLAwoCCYrmwHoYY";
-    const channelId = "UCO2EOwxk1GU_wJMQN1VH1dQ";
-    const url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelId=${channelId}&maxResults=6&order=date&key=${key}`;
-    fetch(url)
-      .then((response) => {
-        setLoading(true);
-        if (!response.ok) {
-          throw new Error("No se pudo cargar los videos en este momento.");
-        }
-        return response.json();
-      })
-      .then((data) => {
-        let videosData = [];
-        for (const e of data.items) {
-          videosData = [
-            ...videosData,
-            {
-              id: e.id.videoId,
-              videoUrl: "https://www.youtube.com/watch?v=" + e.id.videoId,
-              title: e.snippet.title,
-              imageUrl: e.snippet.thumbnails.high.url,
-              description: e.snippet.description,
-            },
-          ];
-        }
-        setVideos(videosData);
+    const getVideos = async () => {
+      const key = "AIzaSyAGyujwMrK9QZoy5G41wLAwoCCYrmwHoYY";
+      const channelId = "UCO2EOwxk1GU_wJMQN1VH1dQ";
+      const url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelId=${channelId}&maxResults=6&order=date&key=${key}`;
+
+      try {
         setError(null);
-        setLoading(false);
-      })
-      .catch((err) => {
-        setError(
-          "No se pudo cargar los videos en este momento: " + err.message
-        );
-        setLoading(false);
-      });
+        setLoading(true);
+        const response = await fetch(url);
+        if (!response.ok) {
+          throw new Error("Fallo en solicitud: " + response.status);
+        }
+        const data = response.json();
+        const videosData = transformData(await data);
+        setVideos(videosData);
+      } catch (error) {
+        setError("Datos no disponibles. " + error.message);
+      }
+      setLoading(false);
+    };
+    getVideos();
   }, []);
 
   return (
