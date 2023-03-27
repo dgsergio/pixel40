@@ -1,6 +1,3 @@
-// 1. Fix hover on social media 
-// 2. Create an array for the social media and make it dynamic 
-
 import classes from "./Footer.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {

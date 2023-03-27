@@ -54,21 +54,40 @@
 @media (min-width: 600px) {
   .footer {
     display: flex;
+    column-gap: 3rem;
     justify-content: space-between;
     align-items: center;
   }
 }
 
-
 .footer p {
-  color: #ffffff;
   font-size: 1.5rem;
   text-align: center;
-  background-color: #c24747;
-  padding: 0rem 2rem;
   margin: 0 0 0.7rem;
   border-radius: 0.3rem;
   animation: zoom 300ms linear;
+}
+
+@media (min-width: 600px) {
+  .footer p {
+    text-align: unset;
+  }
+}
+
+.msg-error {
+  color: #ffffff;
+  background-color: #c24747;
+  padding: 0rem 2rem;
+}
+
+.msg-success {
+  background-color: #099b63;
+  color: #e4fff5;
+  padding: 1.7rem 3rem;
+}
+
+.opacity-50 {
+  opacity: 0.5;
 }
 
 @keyframes zoom {
@@ -81,14 +100,9 @@
   100% {
     transform: scale(100%);
   }
-  
 }
 
-@media (min-width: 600px) {
-  .footer p {
-    text-align: unset;
-  }
-}
+
 
 .footer button {
   margin: 1.5rem 0;

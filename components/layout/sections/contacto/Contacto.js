@@ -1,15 +1,17 @@
-// 1. Make it works
-
 import validate from "@/function/validate";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import classes from "./Contacto.module.css";
+import emailjs from "@emailjs/browser";
 
 const Contacto = () => {
-  const [errors, setErrors] = useState([])
+  const [errors, setErrors] = useState([]);
+  const [success, setSuccess] = useState(false);
   const nombre = useRef(),
     pais = useRef(),
     email = useRef(),
     mensaje = useRef();
+  const form = useRef();
+
   const submitHandler = (e) => {
     e.preventDefault();
     const values = {
@@ -18,8 +20,40 @@ const Contacto = () => {
       email: email.current.value,
       mensaje: mensaje.current.value,
     };
-    setErrors(validate(values));
+    const errorData = validate(values);
+    setErrors(errorData);
+    if (errorData.length === 0) {
+      emailjs
+        .sendForm(
+          "service_chap15x",
+          "template_5p52z4l",
+          form.current,
+          "c7Ps966SgSgO6C9Gb"
+        )
+        .then(
+          (result) => {
+            // console.log(result.text);
+            e.target.reset();
+            setSuccess(true);
+          },
+          (error) => {
+            // console.log(error.text);
+            setErrors([
+              "Hubo un error al enviar el mensaje. Intentelo más tarde o cominiquese por correo a estudiopixel40.gmail.com",
+            ]);
+          }
+        );
+    }
   };
+
+  useEffect(() => {
+    if (success) {
+      const interval = setTimeout(() => {
+        setSuccess(false);
+      }, 6000);
+      return () => clearTimeout(interval);
+    }
+  }, [success]);
 
   return (
     <div className={classes.header}>
@@ -27,6 +61,7 @@ const Contacto = () => {
         <div className={`${classes.margen} container`}>
           <h2>Contacto</h2>
           <form
+            ref={form}
             onSubmit={submitHandler}
             className={classes["formulario-principal"]}
           >
@@ -52,7 +87,7 @@ const Contacto = () => {
                   ref={pais}
                 />
                 <input
-                  type="text"
+                  type="email"
                   placeholder="Email"
                   id="email"
                   name="email"
@@ -69,12 +104,20 @@ const Contacto = () => {
                 className={`${classes["mensaje-alerta"]} ${classes.ocultar}`}
               ></div>
               <div className={classes.footer}>
-                <div>
-                  {errors.map( (e, index) =>
-                    <p key={index}>{e}</p>
-                  )}
+                <div className={classes.messages}>
+                  {errors.map((e, index) => (
+                    <p className={classes["msg-error"]} key={index}>
+                      {e}
+                    </p>
+                  ))}
                 </div>
-                <button>Enviar</button>
+                {success ? (
+                  <p className={classes["msg-success"]}>
+                    ¡Mensaje enviado con éxito!
+                  </p>
+                ) : (
+                  <button>Enviar</button>
+                )}
               </div>
             </fieldset>
           </form>

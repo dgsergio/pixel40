@@ -1,5 +1,3 @@
-// redirect this videos.php? /videos.html?
-
 import Link from "next/link";
 import { useRouter } from "next/router";
 import VideosDownload from "../../VideosDownload";
