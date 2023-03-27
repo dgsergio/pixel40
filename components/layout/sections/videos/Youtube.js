@@ -1,13 +1,11 @@
 import { useEffect, useState } from "react";
-import Video from "@/components/video";
 import classes from "./Youtube.module.css";
+import useFetch from "@/hooks/use-fetch";
+import Video from "@/components/video";
 
 const Youtube = () => {
-  const [videos, setVideos] = useState([]);
-  const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(false);
   const [showMore, setShowMore] = useState(false);
-
+  const { result: videos , error, loading, sendReq: getVideos } = useFetch();
   const transformData = (data) => {
     let videosData = [];
     for (const e of data.items) {
@@ -26,28 +24,13 @@ const Youtube = () => {
   };
 
   useEffect(() => {
-    const getVideos = async () => {
-      const key = "AIzaSyAGyujwMrK9QZoy5G41wLAwoCCYrmwHoYY";
-      const channelId = "UCO2EOwxk1GU_wJMQN1VH1dQ";
-      const url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelId=${channelId}&maxResults=6&order=date&key=${key}`;
+    const key = "AIzaSyAGyujwMrK9QZoy5G41wLAwoCCYrmwHoYY";
+    const channelId = "UCO2EOwxk1GU_wJMQN1VH1dQ";
+    const url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelId=${channelId}&maxResults=6&order=date&key=${key}`;
 
-      try {
-        setError(null);
-        setLoading(true);
-        const response = await fetch(url);
-        if (!response.ok) {
-          throw new Error("Fallo en solicitud: " + response.status);
-        }
-        const data = response.json();
-        const videosData = transformData(await data);
-        setVideos(videosData);
-      } catch (error) {
-        setError("Datos no disponibles. " + error.message);
-      }
-      setLoading(false);
-    };
-    getVideos();
+    getVideos({url}, transformData);
   }, []);
+
 
   return (
     <section className={`${classes.section} container`}>
@@ -95,7 +78,7 @@ const Youtube = () => {
           <a href="https://www.youtube.com/@pixel40/" target="_blank">
             <button>Ir al Canal de YouTube &raquo;</button>
           </a>
-        </div>
+        </div> 
       </div>
     </section>
   );

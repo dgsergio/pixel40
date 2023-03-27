@@ -8,11 +8,11 @@ const CursoSection = () => {
   return (
     <section className={classes.curso}>
       <div className={classes.wrapper + " container"}>
-        <img
+        <img data-aos="fade-right"
           src="img/curso/pack.png"
           alt="Curso Photoshop de 0 a 100"
         />
-        <div className={classes["curso-desc"]}>
+        <div className={classes["curso-desc"]} data-aos="zoom-in">
           <h2>Curso Photoshop de 0 a 100</h2>
           <p>
             Aprende a realizar tus propios trabajos con el curso online <em>Photoshop de 0 a 100</em>. Domina en forma gradual el arte del diseño digital. La metodología de estudio será de forma clara y sencilla.
@@ -25,7 +25,7 @@ const CursoSection = () => {
           {modal === 'CAP1' && <CapituloUno txtBtn='¡ Más información !' linkBtn='/curso'/>}
           </div>
         </div>
-        <div className={classes["curso-items"]}>
+        <div className={classes["curso-items"]} data-aos="zoom-in-up">
           <h4>El Curso</h4>
           <ul>
             <li>9:25 horas de video bajo demanda.</li>
@@ -35,7 +35,7 @@ const CursoSection = () => {
             <li>Acceso de por vida.</li>
           </ul>
         </div>
-        <div className={classes["curso-items"]}>
+        <div className={classes["curso-items"]} data-aos="zoom-in-up">
           <h4>Requisitos</h4>
           <ul>
             <li>Tener Adobe Photoshop, software no incluido en el curso.</li>

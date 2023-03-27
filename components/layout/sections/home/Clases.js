@@ -9,17 +9,24 @@ const ClasesSection = () => {
   return (
     <div className="whitebg" id="clases">
       <section className={classes.clases + " container"}>
-        <h2>Clases online</h2>
-        <p className={classes["subtitulo"]}>
-          Coordina una videollamada con Sergio para tu clase personal
-        </p>
+        <div data-aos="fade-up">
+          <h2>Clases online</h2>
+          <p className={classes["subtitulo"]}>
+            Coordina una videollamada con Sergio para tu clase personal
+          </p>
+        </div>
         <div className={classes["clases-contenido"]}>
           <img
+            data-aos="zoom-in-right"
             className={classes["clases-img"]}
             src="img/clases.jpg"
             alt="Imagen de Clases"
           />
-          <div className={classes["clases-info"]}>
+          <div
+            className={classes["clases-info"]}
+            data-aos="zoom-in-up"
+            data-aos-delay="200"
+          >
             <p>
               Las mejores clases online individuales ¡Anímate! No importa si no
               tienes ningún conocimiento de Photoshop o deseas aprender un tema

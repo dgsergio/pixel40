@@ -5,7 +5,7 @@
 
 .contacto h2 {
   color: #fff;
-  margin-bottom: 1rem;
+  margin-bottom: 0.7rem;
   font-size: 3.8rem;
 }
 
@@ -16,41 +16,100 @@
 
 .formulario-principal legend {
   text-align: center;
-  font-size: 1.9rem;
+  color: var(--gris-claro);
+  font-size: 1.6rem;
+  background-color: var(--gris-oscuro);
+  padding: 0.7rem 1.5rem;
+  border-radius: 1rem;
+  line-height: 2.7rem;
 }
 
 .campos {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 2.8rem;
 }
 
 .campos textarea {
   height: 20rem;
 }
 
-
 @media (min-width: 600px) {
   .campos {
     display: grid;
-    gap: 2.5rem;
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .campos textarea {
     grid-row: 1/4;
     grid-column: 2/3;
     height: auto;
   }
-      
 }
 
-.enviar {
+.footer {
+  display: unset;
+}
+
+@media (min-width: 600px) {
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+
+.footer p {
+  color: #ffffff;
+  font-size: 1.5rem;
+  text-align: center;
+  background-color: #c24747;
+  padding: 0rem 2rem;
+  margin: 0 0 0.7rem;
+  border-radius: 0.3rem;
+  animation: zoom 300ms linear;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(0);
+  }
+  75% {
+    transform: scale(110%);
+  }
+  100% {
+    transform: scale(100%);
+  }
+  
+}
+
+@media (min-width: 600px) {
+  .footer p {
+    text-align: unset;
+  }
+}
+
+.footer button {
+  margin: 1.5rem 0;
   width: 100%;
 }
 
+@media (min-width: 600px) {
+  .footer button {
+    padding: 1.5rem 7rem;
+    width: auto;
+  }
+}
+
 .campos {
-  margin: 3rem auto;
+  margin: 3rem auto 1.5rem;
+}
+
+@media (min-width: 600px) {
+  .campos {
+    margin: 3rem auto;
+  }
 }
 
 .campos input,

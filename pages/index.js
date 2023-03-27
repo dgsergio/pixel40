@@ -5,10 +5,17 @@ import CursoSection from "../components/layout/sections/home/Curso";
 import ClasesSection from "../components/layout/sections/home/Clases";
 import VideosSection from "../components/layout/sections/home/Videos";
 import ServiciosSection from "../components/layout/sections/home/Servicios";
-import NavFixed from "@/components/layout/NavFixed";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const HomePage = () => {
-
+  useEffect(() => {
+    Aos.init({
+      duration: 1500,
+      once: true,
+    });
+  }, []);
   return (
     <>
       <Head>
