@@ -1,5 +1,5 @@
 # Pixel40 React website
-This application is the official website of the YouTube channel __Pixel40*__ 
+This is a website application and __Pixel40*__ official site. You can visit it at [www.pixel40.com.ar](https://www.pixel40.com.ar)
 
 ## Technology used
 ### React, Next.js, CSS en modules
@@ -23,7 +23,7 @@ Some highlights of the code are:
 - Making of multiple animated modals with the help of Context in React to handle state across all components. A good example is in the home page section where we can open the modal to *“Reproducir Capítulo 1”* or the modal for *“Precio y Formas de Pago”*.
   
 ## *About Pixel40
-[Pixel40.com.ar](http://pixel40.com.ar) is a personal project, hosted by Sergio Garofalo, where you can find a lot of free content in Spanish to learn softwares related to graphic design, especially Adobe Photoshop.
+[Pixel40](http://pixel40.com.ar) is a personal project, hosted by Sergio Garofalo, where you can find a lot of free content in Spanish to learn softwares related to graphic design, especially Adobe Photoshop.
 
 Thanks to the success achieved on social networks (On [YouTube](https://youtube.com/@pixel40) more than 200k subscribers and on [TikTok](https://www.tiktok.com/@estudiopixel40) almost 60k) Pixel40 became the number 1 place to get free Photoshop tutorials in the Spanish-speaking world.
 
