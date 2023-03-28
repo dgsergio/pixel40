@@ -1,4 +1,4 @@
-## Pixel40
+## Pixel40 React website
 This application is the official website of the YouTube channel __Pixel40*__ 
 
 ## Technology used
