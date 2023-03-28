@@ -1,20 +1,21 @@
+## Pixel40
 This application is the official website of the YouTube channel __Pixel40*__ 
 
 ## Technology used
-#### React, Next.js, CSS en modules
+### React, Next.js, CSS en modules
 This SPA project was created with the React library using hooks and extending its capabilities with Next.Js. This last framework was chosen since it allows me routing in a very efficient way and benefits me with server side rendering.
 
-#### App Architecture
+### App Architecture
 The application is completely responsive, adapting to any type of device.
 
 The **CSS style** of the website was completely coded by hand, implementing the principle of modules. Just like **JSX**, no external code was copied.
 
 In order to maintain full control over the app, external libraries such as Bootstrap or Tailwind were not used.
 
-#### Animations
+### Animations
 All animations were created manually with CSS, with the exception of the home page scroll animations where *AOS dependency* was installed as it is a practical solution with pretty results.
 
-#### Observations
+### Observations
 Some highlights of the code are:
 - Implementation of the **Google Cloud Youtube API** on the video page, where the latest videos published by the channel are displayed.
 - Custom HOOK creation to fetch data via a Javascript async await function.
