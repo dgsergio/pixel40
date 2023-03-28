@@ -37,11 +37,10 @@ a:hover {
   --gris: #5a6269;
   --gris-claro: #ddd;
   --claro: #daeaef;
-  --gothic: 'Nanum Gothic', sans-serif;
-  --serif: 'Roboto Slab', serif;   
-  --sans-serif: 'Montserrat', sans-serif;
-  --cursive: 'Solitreo', cursive;
-  
+  --gothic: "Nanum Gothic", sans-serif;
+  --serif: "Roboto Slab", serif;
+  --sans-serif: "Montserrat", sans-serif;
+  --cursive: "Solitreo", cursive;
 }
 
 body {
@@ -63,7 +62,6 @@ section {
   padding: 8rem 0;
 }
 
-
 h1 {
   color: var(--claro);
 }
@@ -78,7 +76,7 @@ h4 {
 
 hr {
   border: 0;
-  border-top: 1px solid rgba(0,0,0,.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 h2,
@@ -101,9 +99,9 @@ a {
 }
 
 li {
-	font-size:1.6rem;
-	font-family: var(--serif);
-	line-height: 2.8rem
+  font-size: 1.6rem;
+  font-family: var(--serif);
+  line-height: 2.8rem;
 }
 
 input,
@@ -112,14 +110,15 @@ textarea {
   letter-spacing: 0.01rem;
 }
 
-button, .button {
+button,
+.button {
   font-family: var(--sans-serif);
   font-size: 1.5rem;
   letter-spacing: 0.05rem;
   padding: 2rem 3.5rem;
   text-transform: uppercase;
   font-weight: bold;
-  background-color: var(--primario);;
+  background-color: var(--primario);
   color: #fff;
   border: none;
   border-radius: 0.5rem;
@@ -130,7 +129,8 @@ button, .button {
   text-align: center;
 }
 
-button:hover, .button:hover {
+button:hover,
+.button:hover {
   background-color: var(--primarioOscuro);
   text-decoration: none;
   color: #fff;
@@ -138,15 +138,48 @@ button:hover, .button:hover {
 }
 
 @media (min-width: 768px) {
-  button, .button {
+  button,
+  .button {
     width: auto;
   }
-
 }
-
 
 .container {
   margin: 0 auto;
   width: 91%;
   max-width: 1140px;
 }
+
+.not-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.not-found h3 {
+  margin: 25vh 0 0;
+  text-transform: uppercase;
+  font-size: 2.7rem;
+}
+
+.not-found p {
+  text-align: center;
+  margin: 0;
+}
+
+.error-404 {
+  font-size: 20rem;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.04);
+  text-align: right;
+  padding-right: 0.5rem;
+}
+
+@media (min-width: 480px) {
+  .error-404 {
+    font-size: 25rem;
+    padding-right: 3rem;
+    
+}
+}
+
