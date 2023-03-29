@@ -19,7 +19,7 @@ const HomePage = () => {
   return (
     <>
       <Head>
-        <title>Pixel40 - Reviews y Tutoriales</title>
+        <title>Pixel40 - Tutoriales y Reviews</title>
       </Head>
       <Header />
       <main className="whitebg">

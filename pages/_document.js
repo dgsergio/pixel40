@@ -6,7 +6,7 @@ export default function Document() {
       <Head>
         <meta
           name="description"
-          content="Reviews de tecnología y gadgets. Cursos de Adobe Photoshop. Desarrollo de páginas web y diseño gráfico"
+          content="Tutoriales de Adobe Photoshop, reviews de tecnología y gadgets. Desarrollo de páginas web y diseño gráfico"
         />
         <meta name="author" content="Pixel40" />
         <meta property="og:image" content="img/avatar.jpg" />
