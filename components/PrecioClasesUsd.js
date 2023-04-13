@@ -43,7 +43,7 @@ const PrecioClasesUsd = () => {
           title="1 Mes"
           price={prices.mes}
           description="(4 clases)"
-          asterisk="*4 clases de 45 minutos c/u. Tiene un vencimiento de 30 dias a partir del día de pago. Precio expresado en dólares USD.."
+          asterisk="*4 clases de 45 minutos c/u. Tiene un vencimiento de 30 días a partir del día de pago. Precio expresado en dólares USD.."
           currency='USD'
         />
       ) : (

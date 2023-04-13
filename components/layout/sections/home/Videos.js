@@ -3,7 +3,7 @@ import classes from "./Videos.module.css";
 
 const VideosSection = () => {
   return (
-    <section className={classes["videos"]} data-aos="slide-up">
+    <section className={classes["videos"]} data-aos="slide-up" data-aos-offset="-200">
       <div className="container">
         <Link className={classes.link} href="/videos">
           <img src="img/youtube.jpg" alt="Imagen YouTube" />

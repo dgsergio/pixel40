@@ -5,13 +5,13 @@ const ServiciosSection = () => {
   return (
     <div className="whitebg">
       <section className={classes.servicios + " container"}>
-        <div data-aos="fade-right">
+        <div>
           <h2>Servicios</h2>
           <p className={classes.subtitulo}>
             Te ofrecemos todo tipo de soluciones digitales
           </p>
         </div>
-        <div className={classes["servicios-cuerpo"]} data-aos="fade-up">
+        <div className={classes["servicios-cuerpo"]}>
           {SERVICIOS_LIST.map((e) => (
             <div key={e.id} className={classes.card}>
               <img src={e.imgUrl} alt={e.title} />

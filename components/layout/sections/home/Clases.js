@@ -9,7 +9,7 @@ const ClasesSection = () => {
   return (
     <div className="whitebg" id="clases">
       <section className={classes.clases + " container"}>
-        <div data-aos="fade-up">
+        <div>
           <h2>Clases online</h2>
           <p className={classes["subtitulo"]}>
             Coordina una videollamada con Sergio para tu clase personal
@@ -17,15 +17,12 @@ const ClasesSection = () => {
         </div>
         <div className={classes["clases-contenido"]}>
           <img
-            data-aos="zoom-in-right"
             className={classes["clases-img"]}
             src="img/clases.jpg"
             alt="Imagen de Clases"
           />
           <div
             className={classes["clases-info"]}
-            data-aos="zoom-in-up"
-            data-aos-delay="200"
           >
             <p>
               Las mejores clases online individuales ¡Anímate! No importa si no
