@@ -15,8 +15,7 @@ In order to maintain full control over the app, external libraries such as Boots
 ### Animations
 All animations were created manually with CSS, with the exception of the home page scroll animations where *AOS dependency* was installed as it is a practical solution with pretty results.
 
-### Observations
-Some highlights of the code are:
+### Highlights
 - Implementation of the **Google Cloud Youtube API** on the video page, where the latest videos published by the channel are displayed.
 - Custom HOOK creation to fetch data via a Javascript async await function.
 - Iteration of an Array through the Javascript map method and displaying it on the screen. YouTube videos are an example of this, as are the modules in the *“Curso”* section.
