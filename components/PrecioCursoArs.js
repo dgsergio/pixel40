@@ -1,14 +1,15 @@
 import Card from "./UI/Card";
 import { useState } from "react";
 import CardTransfer from "./UI/CardTransfer";
+import pricesStored from '../store/prices';
 
 const PrecioCursoArs = () => {
   const [card1, setCard1] = useState(true);
   const [card2, setCard2] = useState(true);
   const prices = {
-    module: 13800,
-    course: 15400,
-    oldPrice: 30800
+    module: pricesStored.ars.modulo,
+    course: pricesStored.ars.curso,
+    oldPrice: pricesStored.ars.cursoStriked
   }
 
   const toggleCard = (card) => {

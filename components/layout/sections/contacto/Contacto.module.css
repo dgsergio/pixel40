@@ -109,6 +109,13 @@
   width: 100%;
 }
 
+.footer button:disabled {
+  background-color: #6e6e6e;
+  color: #b9b8b8;
+  transform: scale(.9);
+  cursor: no-drop;
+}
+
 @media (min-width: 600px) {
   .footer button {
     padding: 1.5rem 7rem;

@@ -1,15 +1,16 @@
-import Card from "./UI/Card";
-import CardPaypal from "./UI/CardPaypal";
-import { useState } from "react";
+import Card from './UI/Card';
+import CardPaypal from './UI/CardPaypal';
+import { useState } from 'react';
+import pricesStored from '../store/prices';
 
 const PrecioCursoUsd = () => {
   const [card1, setCard1] = useState(true);
   const [card2, setCard2] = useState(true);
   const prices = {
-    module: 34,
-    course: 43,
-    oldPrice: 85
-  }
+    module: pricesStored.usd.modulo,
+    course: pricesStored.usd.curso,
+    oldPrice: pricesStored.usd.cursoStriked,
+  };
 
   const toggleCard = (card) => {
     if (card === 1) {
@@ -18,7 +19,6 @@ const PrecioCursoUsd = () => {
       setCard2((pV) => !pV);
     }
   };
-
 
   return (
     <>
@@ -44,7 +44,7 @@ const PrecioCursoUsd = () => {
           price={prices.course}
           description="(curso completo)"
           asterisk="*Precio expresado en dólares USD."
-          currency='USD'
+          currency="USD"
         />
       ) : (
         <CardPaypal price={prices.course} id={2} onClose={toggleCard} />

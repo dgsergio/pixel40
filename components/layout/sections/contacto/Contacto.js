@@ -1,11 +1,15 @@
-import validate from "@/function/validate";
-import { useEffect, useRef, useState } from "react";
-import classes from "./Contacto.module.css";
-import emailjs from "@emailjs/browser";
+import validate from '@/function/validate';
+import { useEffect, useRef, useState } from 'react';
+import classes from './Contacto.module.css';
+import emailjs from '@emailjs/browser';
+import { useRouter } from 'next/router';
 
 const Contacto = () => {
   const [errors, setErrors] = useState([]);
   const [success, setSuccess] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const router = useRouter();
+
   const nombre = useRef(),
     pais = useRef(),
     email = useRef(),
@@ -23,23 +27,26 @@ const Contacto = () => {
     const errorData = validate(values);
     setErrors(errorData);
     if (errorData.length === 0) {
+      setLoading(true);
       emailjs
         .sendForm(
-          "service_chap15x",
-          "template_5p52z4l",
+          'service_chap15x',
+          'template_5p52z4l',
           form.current,
-          "c7Ps966SgSgO6C9Gb"
+          'c7Ps966SgSgO6C9Gb'
         )
         .then(
           (result) => {
             // console.log(result.text);
             e.target.reset();
             setSuccess(true);
+            setLoading(false);
           },
           (error) => {
             // console.log(error.text);
             setErrors([
-              "Hubo un error al enviar el mensaje. Intentelo más tarde o cominiquese por correo a estudiopixel40.gmail.com",
+              'Hubo un error al enviar el mensaje. Intentelo más tarde o cominiquese por correo a estudiopixel40.gmail.com',
+              setLoading(false),
             ]);
           }
         );
@@ -49,7 +56,7 @@ const Contacto = () => {
   useEffect(() => {
     if (success) {
       const interval = setTimeout(() => {
-        setSuccess(false);
+        router.push('/');
       }, 6000);
       return () => clearTimeout(interval);
     }
@@ -63,7 +70,7 @@ const Contacto = () => {
           <form
             ref={form}
             onSubmit={submitHandler}
-            className={classes["formulario-principal"]}
+            className={classes['formulario-principal']}
           >
             <fieldset>
               <legend>
@@ -101,22 +108,24 @@ const Contacto = () => {
                 ></textarea>
               </div>
               <div
-                className={`${classes["mensaje-alerta"]} ${classes.ocultar}`}
+                className={`${classes['mensaje-alerta']} ${classes.ocultar}`}
               ></div>
               <div className={classes.footer}>
                 <div className={classes.messages}>
                   {errors.map((e, index) => (
-                    <p className={classes["msg-error"]} key={index}>
+                    <p className={classes['msg-error']} key={index}>
                       {e}
                     </p>
                   ))}
                 </div>
                 {success ? (
-                  <p className={classes["msg-success"]}>
+                  <p className={classes['msg-success']}>
                     ¡Mensaje enviado con éxito!
                   </p>
                 ) : (
-                  <button>Enviar</button>
+                  <button disabled={loading} type="submit">
+                    Enviar
+                  </button>
                 )}
               </div>
             </fieldset>

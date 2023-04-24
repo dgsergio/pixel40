@@ -1,13 +1,14 @@
 import Card from "./UI/Card";
 import CardPaypal from "./UI/CardPaypal";
 import { useState } from "react";
+import pricesStored from '../store/prices';
 
 const PrecioClasesUsd = () => {
   const [card1, setCard1] = useState(true);
   const [card2, setCard2] = useState(true);
   const prices = {
-    dia: 19.99,
-    mes: 64,
+    dia: pricesStored.usd.clase,
+    mes: pricesStored.usd.clases,
     oldPrice: undefined
   }
 
