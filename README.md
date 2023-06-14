@@ -1,47 +1,36 @@
 # Pixel40 React website
-This is a website application and __Pixel40*__ official site. You can visit it at [www.pixel40.com.ar](https://www.pixel40.com.ar)
+
+This is the official website of **Pixel40\***. You can visit it at [www.pixel40.com.ar](https://www.pixel40.com.ar)
 
 ## Technology used
+
 ### React, Next.js, CSS en modules
-This SPA project was created with the React library using hooks and extending its capabilities with Next.Js. This last framework was chosen since it allows me routing in a very efficient way and benefits me with server side rendering.
+
+This SPA project was created using the React library, utilizing hooks and extending its capabilities with Next.js. Next.js was chosen as it provides efficient routing and benefits from server-side rendering.
 
 ### App Architecture
-The application is completely responsive, adapting to any type of device.
 
-The **CSS style** of the website was completely coded by hand, implementing the principle of modules. Just like **JSX**, no external code was copied.
+The application is fully responsive, adapting to all types of devices.
 
-In order to maintain full control over the app, external libraries such as Bootstrap or Tailwind were not used.
+The **CSS style** of the website were developed from scratch, following the css modular approach. Similar to JSX, no external code was copied.
+
+To maintain complete control over the application, external libraries like Bootstrap or Tailwind were not utilized.
 
 ### Animations
-All animations were created manually with CSS, with the exception of the home page scroll animations where *AOS dependency* was installed as it is a practical solution with pretty results.
+
+All animations were manually created using CSS. However, for the scroll animations on the home page, the _AOS dependency_ was utilized as a convenient solution that yields visually appealing results.
 
 ### Highlights
-- Implementation of the **Google Cloud Youtube API** on the video page, where the latest videos published by the channel are displayed.
-- Custom HOOK creation to fetch data via a Javascript async await function.
-- Iteration of an Array through the Javascript map method and displaying it on the screen. YouTube videos are an example of this, as are the modules in the *“Curso”* section.
-- Making of multiple animated modals with the help of Context in React to handle state across all components. A good example is in the home page section where we can open the modal to *“Reproducir Capítulo 1”* or the modal for *“Precio y Formas de Pago”*.
-  
-## *About Pixel40
-[Pixel40](http://pixel40.com.ar) is a personal project, hosted by Sergio Garofalo, where you can find a lot of free content in Spanish to learn softwares related to graphic design, especially Adobe Photoshop.
 
-Thanks to the success achieved on social networks (On [YouTube](https://youtube.com/@pixel40) more than 200k subscribers and on [TikTok](https://www.tiktok.com/@estudiopixel40) almost 60k) Pixel40 became the number 1 place to get free Photoshop tutorials in the Spanish-speaking world.
+- Implementation of the **Google Cloud Youtube API** on the video page, showcasing the channel's latest published videos.
+- Creation of a custom HOOK to fetch data using JavaScript's async/await function.
+- Iteration over an array using the JavaScript map method and displaying the content on the screen. This approach is used for various elements, including YouTube videos and modules in the _“Curso”_ section.
+- Creation of multiple animated modals using React Context to manage state across all components. An example can be seen on the home page section, where modals for _“Reproducir Capítulo 1”_ and _“Precio y Formas de Pago”_ can be opened.
 
-Sergio on the Pixel40 platform also offers paid courses, personalized classes of Photoshop and web solutions.
+## \*About Pixel40
 
-## Getting Started
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+[Pixel40](http://pixel40.com.ar) is a personal project hosted by Sergio Garofalo. It offers a wide range of free content in Spanish for learning software related to graphic design, with a particular focus on Adobe Photoshop.
 
-First, install the dependecys:
+Thanks to its success on social networks, including over 200k subscribers on [YouTube](https://youtube.com/@pixel40) and almost 60k followers on [TikTok](https://www.tiktok.com/@estudiopixel40), Pixel40 has become the leading platform for free Photoshop tutorials in the Spanish-speaking world.
 
-```bash
-npm install
-```
- Then run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Sergio also provides paid courses, personalized Photoshop classes, and web solutions on the Pixel40 platform.
