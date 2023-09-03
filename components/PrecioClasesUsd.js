@@ -1,6 +1,6 @@
-import Card from "./UI/Card";
-import CardPaypal from "./UI/CardPaypal";
-import { useState } from "react";
+import Card from './UI/Card';
+import CardPaypal from './UI/CardPaypal';
+import { useState } from 'react';
 import pricesStored from '../store/prices';
 
 const PrecioClasesUsd = () => {
@@ -9,8 +9,8 @@ const PrecioClasesUsd = () => {
   const prices = {
     dia: pricesStored.usd.clase,
     mes: pricesStored.usd.clases,
-    oldPrice: undefined
-  }
+    oldPrice: undefined,
+  };
 
   const toggleCard = (card) => {
     if (card === 1) {
@@ -19,7 +19,6 @@ const PrecioClasesUsd = () => {
       setCard2((pV) => !pV);
     }
   };
-
 
   return (
     <>
@@ -30,7 +29,7 @@ const PrecioClasesUsd = () => {
           title="1 Día"
           price={prices.dia}
           description="(1 clase)"
-          asterisk="*Cada clase tiene una duración de 45 minutos y tiene un vencimiento de 30 días. Precio expresado en dólares USD."
+          asterisk="*Cada clase tiene una duración de 45 minutos y tiene un vencimiento de 30 días. Precio expresado en euros EUR."
         />
       ) : (
         <CardPaypal price={prices.dia} id={1} onClose={toggleCard} />
@@ -44,8 +43,8 @@ const PrecioClasesUsd = () => {
           title="1 Mes"
           price={prices.mes}
           description="(4 clases)"
-          asterisk="*4 clases de 45 minutos c/u. Tiene un vencimiento de 30 días a partir del día de pago. Precio expresado en dólares USD.."
-          currency='USD'
+          asterisk="*4 clases de 45 minutos c/u. Tiene un vencimiento de 30 días a partir del día de pago. Precio expresado en euros EUR."
+          currency="USD"
         />
       ) : (
         <CardPaypal price={prices.mes} id={2} onClose={toggleCard} />

@@ -13,9 +13,9 @@ const CardPaypal = (props) => {
         href={`https://paypal.me/sergiopixel40/${props.price}/`}
         target="_blank"
       >
-        Pagar ${props.price}
+        Pagar {props.price} €
       </a>
-      <div className={classes.asterisk}>*Precio expresado en dólares USD.</div>
+      <div className={classes.asterisk}>*Precio expresado en euros EUR.</div>
       <div className={classes.description}>
         Por favor,{' '}
         <Link href="/contacto" onClick={closeHandler}>

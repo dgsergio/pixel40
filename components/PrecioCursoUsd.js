@@ -29,7 +29,7 @@ const PrecioCursoUsd = () => {
           title="Módulo 1"
           price={prices.module}
           description="(cada módulo)"
-          asterisk="*Precio expresado en dólares USD."
+          asterisk="*Precio expresado en euros EUR."
         />
       ) : (
         <CardPaypal price={prices.module} id={1} onClose={toggleCard} />
@@ -43,7 +43,7 @@ const PrecioCursoUsd = () => {
           oldPrice={prices.oldPrice}
           price={prices.course}
           description="(curso completo)"
-          asterisk="*Precio expresado en dólares USD."
+          asterisk="*Precio expresado en euros EUR."
           currency="USD"
         />
       ) : (

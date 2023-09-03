@@ -6,8 +6,8 @@ const prices = {
     modulo: 34,
     cursoStriked: 85,
     curso: 43,
-    clase: 19.99,
-    clases: 64,
+    clase: 19,
+    clases: 59,
   },
   ars: {
     modulo: 23400,
