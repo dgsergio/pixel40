@@ -1,13 +1,13 @@
-import Head from "next/head";
-import Header from "../components/layout/Header";
-import Footer from "../components/layout/Footer";
-import CursoSection from "../components/layout/sections/home/Curso";
-import ClasesSection from "../components/layout/sections/home/Clases";
-import VideosSection from "../components/layout/sections/home/Videos";
-import ServiciosSection from "../components/layout/sections/home/Servicios";
-import Aos from "aos";
-import "aos/dist/aos.css";
-import { useEffect } from "react";
+import Head from 'next/head';
+import Header from '../components/layout/Header';
+import Footer from '../components/layout/Footer';
+import CursoSection from '../components/layout/sections/home/Curso';
+// import ClasesSection from "../components/layout/sections/home/Clases";
+import VideosSection from '../components/layout/sections/home/Videos';
+import ServiciosSection from '../components/layout/sections/home/Servicios';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 const HomePage = () => {
   useEffect(() => {
@@ -24,7 +24,7 @@ const HomePage = () => {
       <Header />
       <main className="whitebg">
         <CursoSection />
-        <ClasesSection />
+        {/* TEMP diseabled <ClasesSection /> */}
         <VideosSection />
         <ServiciosSection />
       </main>
