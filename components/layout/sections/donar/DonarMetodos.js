@@ -41,22 +41,6 @@ const DonarMetodos = () => {
           <button>Donacion Única</button>
         </a>
       </div>
-      <div className={classes.row}>
-        <h3>Mercado Pago</h3>
-        <p>
-          Por MercadoPago <strong>puedes suscribirte mensualmente</strong>{' '}
-          eligiendo el monto mensual que consideres más apropiado:
-        </p>
-        <div className={classes.btnOpt}>
-          <a
-            className={`${classes['btn-s']} ${classes.primary}`}
-            target="_blank"
-            href="https://www.mercadopago.com/mla/debits/new?preapproval_plan_id=2c9380847726c5fe017753767f483200"
-          >
-            Donación mensual
-          </a>
-        </div>
-      </div>
 
       <div className={classes.row}>
         <h3>Transferencia Bancaria</h3>
