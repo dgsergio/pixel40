@@ -67,16 +67,11 @@ const Contacto = () => {
       <section className={classes.contacto}>
         <div className={`${classes.margen} container`}>
           <h2>Contacto</h2>
-          <form
-            ref={form}
-            onSubmit={submitHandler}
-            className={classes['formulario-principal']}
-          >
+          <form ref={form} className={classes['formulario-principal']} disabled>
             <fieldset>
               <legend>
-                Dejanos tu mensaje a continuación o al correo:
-                <br />
-                estudiopixel40@gmail.com
+                Esta página es solo en concepto de exhibición. Por favor
+                diríjase a la pagina oficial de Pixel40 (www.pixle40.com.ar)
               </legend>
               <div className={classes.campos}>
                 <input
@@ -85,6 +80,7 @@ const Contacto = () => {
                   id="nombre"
                   name="nombre"
                   ref={nombre}
+                  disabled
                 />
                 <input
                   type="text"
@@ -92,6 +88,7 @@ const Contacto = () => {
                   id="pais"
                   name="pais"
                   ref={pais}
+                  disabled
                 />
                 <input
                   type="email"
@@ -99,12 +96,14 @@ const Contacto = () => {
                   id="email"
                   name="email"
                   ref={email}
+                  disabled
                 />
                 <textarea
                   placeholder="Mensaje"
                   id="mensaje"
                   name="mensaje"
                   ref={mensaje}
+                  disabled
                 ></textarea>
               </div>
               <div
@@ -123,7 +122,7 @@ const Contacto = () => {
                     ¡Mensaje enviado con éxito!
                   </p>
                 ) : (
-                  <button disabled={loading} type="submit">
+                  <button disabled={true} type="submit">
                     Enviar
                   </button>
                 )}

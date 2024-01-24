@@ -1,16 +1,20 @@
-import { useRouter } from "next/router";
-import React, { useContext } from "react";
-import Modal from "./UI/Modal";
-import { ModalContext } from "@/store/modal-context";
-import classes from "./CapituloUno.module.css";
+import { useRouter } from 'next/router';
+import React, { useContext } from 'react';
+import Modal from './UI/Modal';
+import { ModalContext } from '@/store/modal-context';
+import classes from './CapituloUno.module.css';
 
 const CapituloUno = (props) => {
   const router = useRouter();
   const { closeHandler, openHandler } = useContext(ModalContext);
-
+  const mensaje = () =>
+    alert(
+      'Esta página es solo en concepto de exhibición. Por favor diríjase a la pagina oficial de Pixel40 (www.pixle40.com.ar)'
+    );
   const clickHandler = () => {
-    if (props.linkBtn === "PRECIO") {
-      openHandler("PRECIO");
+    if (props.linkBtn === 'PRECIO') {
+      // openHandler("PRECIO");
+      mensaje();
       return;
     }
     router.push(props.linkBtn);

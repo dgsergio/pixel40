@@ -3,16 +3,18 @@ import classes from './DonarMetodos.module.css';
 
 const DonarMetodos = () => {
   const [showBankBtn, setShowBankBtn] = useState(true);
+  const mensaje = () =>
+    alert(
+      'Esta página es solo en concepto de exhibición. Por favor diríjase a la pagina oficial de Pixel40 (www.pixle40.com.ar)'
+    );
+
   const bankDate = (
     <div className={classes.bankData}>
       <p>
-        <b>Banco:</b> Brubank Alias:{' '}
-      </p>
-      <p>
-        <b>Alias:</b>estudiopixel40{' '}
-      </p>
-      <p>
-        <b>CBU:</b> 1430001713020446250014
+        <i>
+          Esta página es solo en concepto de exhibición. Por favor diríjase a la
+          pagina oficial de Pixel40 (www.pixle40.com.ar)
+        </i>
       </p>
     </div>
   );
@@ -27,9 +29,8 @@ const DonarMetodos = () => {
           Se hace con tarjeta de crédito y se cobra mensualmente, el monto es en
           dólares, <strong>pesificándose al momento de cobro</strong>:
         </p>
-        <a href="https://www.patreon.com/pixel40" target="_blank">
-          <button>Volverse patreon</button>
-        </a>
+
+        <button onClick={mensaje}>Volverse patreon</button>
       </div>
       <div className={classes.row}>
         <h3>Paypal</h3>
@@ -37,9 +38,7 @@ const DonarMetodos = () => {
           También es posible realizar una <b>donación única</b> con PayPal:
         </p>
 
-        <a href="https://paypal.me/sergiopixel40/" target="_blank">
-          <button>Donacion Única</button>
-        </a>
+        <button onClick={mensaje}>Donacion Única</button>
       </div>
 
       <div className={classes.row}>

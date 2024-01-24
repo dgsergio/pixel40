@@ -1,4 +1,4 @@
-import classes from "./VideosDownload.module.css";
+import classes from './VideosDownload.module.css';
 
 const VideosDownload = ({ img, desc, url, type }) => {
   return (
@@ -9,11 +9,11 @@ const VideosDownload = ({ img, desc, url, type }) => {
       <div className={classes.body}>
         <p>{desc}</p>
         <img src={img} alt="Imagen para descargar" />
-        {type !== "jpg" && (
+        {/* {type !== "jpg" && (
           <a className="button" target="_blank" href={url}>
             Descargar
           </a>
-        )}
+        )} */}
       </div>
     </div>
   );

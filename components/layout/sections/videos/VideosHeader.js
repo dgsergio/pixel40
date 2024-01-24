@@ -1,31 +1,31 @@
-import Link from "next/link";
-import { useRouter } from "next/router";
-import VideosDownload from "../../VideosDownload";
-import classes from "./VideosHeader.module.css";
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import VideosDownload from '../../VideosDownload';
+import classes from './VideosHeader.module.css';
 
 const VideosHeader = () => {
   const router = useRouter();
   let fileData = {
-    desc: "Material anterior al 9/6/2022, buscalo por fecha de subida del video.Formato de nombre AÑO-MES-DIA.",
-    img: "img/videos/galeria.jpg",
-    url: "https://www.dropbox.com/sh/cszt0dplpfhtqo0/AADvoSobfjIzMVFwCP1SWFg0a?dl=0",
-    type: "default",
+    desc: 'Material anterior al 9/6/2022, buscalo por fecha de subida del video.Formato de nombre AÑO-MES-DIA.',
+    img: 'img/videos/galeria.jpg',
+    url: 'https://www.dropbox.com/sh/cszt0dplpfhtqo0/AADvoSobfjIzMVFwCP1SWFg0a?dl=0',
+    type: 'default',
   };
   const file = Object.keys(router.query)[0];
 
   if (file) {
-    if (file.slice(-3) === "jpg") {
+    if (file.slice(-3) === 'jpg') {
       fileData = {
-        desc: "Puedes presionar el boton derecho sobre la imagen y seleccionar Guardar imagen como...",
-        img: "img/dl/" + Object.keys(router.query)[0],
+        desc: 'Puedes presionar el boton derecho sobre la imagen y seleccionar Guardar imagen como...',
+        img: 'img/dl/' + Object.keys(router.query)[0],
         url: undefined,
         type: file.slice(-3),
       };
-    } else if (file.slice(-3) === "zip") {
+    } else if (file.slice(-3) === 'zip') {
       fileData = {
-        desc: "Descarga el material presionando en el enlace disponible más abajo.",
-        img: "img/file.png",
-        url: "img/dl/" + Object.keys(router.query)[0],
+        desc: 'Descarga el material presionando en el enlace disponible más abajo.',
+        img: 'img/file.png',
+        url: 'img/dl/' + Object.keys(router.query)[0],
         type: file.slice(-3),
       };
     }
