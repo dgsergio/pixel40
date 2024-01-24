@@ -1,6 +1,6 @@
 # Pixel40 React website
 
-This is the official website of **Pixel40\***. You can visit it at [www.pixel40.com.ar](https://www.pixel40.com.ar)
+This was the official **Pixel40\*** website until 2023. You can visit it at (https://jade-cannoli-d49db4.netlify.app/)
 
 ## Technology used
 
